@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  .container
+    .profile-card
+      .top
+        .image-wrapper
+          .aspect-ratio
+            img.mugshot(src='images/tomche.jpeg')
+        .details
+          .name #{name}
+          .twitter #{twitter}
+          a(href=github,target="_blank").button GitHub
+      if blurb
+        .about
+          hr
+          .blurb !{blurb}
